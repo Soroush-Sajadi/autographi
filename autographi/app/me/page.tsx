@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Me } from "./Me";
 
-const Me = () => {
+const PageMe = () => {
   return (
     <div>
-      <>ME</>
+      <Me />
     </div>
-  )
-}
+  );
+};
 
-export default Me
+export default PageMe;

@@ -1,17 +1,23 @@
-import React from 'react'
+"use client";
+import React from "react";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle 
-} from "@/components/ui/navigation-menu"
-import Link from "next/link"
+  navigationMenuTriggerStyle
+} from "@/components/ui/navigation-menu";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ROUTES } from "@/app/types";
 
-function Navbar() {
+export const Pages = () => {
+  const pathname = usePathname();
+  const currentRoute = pathname.split("/")[1];
+  const additionalClasses = "";
   return (
     <div>
-      <NavigationMenu className='contents'>
+      <NavigationMenu className="contents">
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link href="/" legacyBehavior passHref>
@@ -44,7 +50,5 @@ function Navbar() {
         </NavigationMenuList>
       </NavigationMenu>
     </div>
-  )
-}
-
-export default Navbar
+  );
+};

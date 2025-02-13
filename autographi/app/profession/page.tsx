@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function Profession () {
-  return (
-    <div>
-      Profession
-    </div>
-  )
+function PageProfession() {
+  return <div>Profession</div>;
 }
 
-export default Profession
+export default PageProfession;
